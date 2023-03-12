@@ -10,18 +10,24 @@ function animate(){
     }
 }
 
+animate();
+
 function animOnScroll(animItem){
     const animHeight = animItem.offsetHeight;
-    const animPos = getTopPos(animItem);
-    const animStart = 4;
+    let animPos = getTopPos(animItem);
+    const animStart = 10;
     let animItemPoint = window.innerHeight - animHeight / animStart;
     if(animHeight > window.innerHeight){
         animItemPoint = window.innerHeight - window.innerHeight / animStart;
     }
+    if(isNaN(animPos)){
+        animPos = 0; 
+    }
     if(scrollY > animPos - animItemPoint && scrollY < animPos + animHeight){
+        
         animItem.classList.add('_active');
     }
-    else{
+    else if(!animItem.classList.contains("_anim-no-hide")){
         animItem.classList.remove('_active');
     }
 }
@@ -32,6 +38,3 @@ function getTopPos(el){
     return rect.top + scrolltop;
 } 
 
-setTimeout(()=>{
-    animate();
-}, 300);
