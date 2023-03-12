@@ -1,0 +1,44 @@
+@import "base.scss";
+
+/* form */
+
+h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1{
+    margin: 20px 0 40px 0;
+    text-align: center;
+}
+
+.form-pay{
+    margin-bottom: 20px;
+}
+
+.trash{
+    margin-left: 20px;
+}
+
+.pr{
+    height: 100%;
+    padding: 15px 0 15px 15px;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+}
+
+.quantity label{
+    margin: 0 10px;
+}
+
+.ordering{
+    margin-left: 50px;
+}
+
+.common-price{
+    @include flexible();
+    max-width: 200px;
+}
