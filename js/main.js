@@ -30,7 +30,6 @@ let commonPrice = 0;
 
 productsAdd.forEach((item)=>{
     item.addEventListener("click", function (event) {
-        console.log(1);
         const card = event.target.closest(".popular__card");
         const productPrice = card.querySelector(".popular__price");
         let price = Number(productPrice.textContent.trim().slice(0, -3));
