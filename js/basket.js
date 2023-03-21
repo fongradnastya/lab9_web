@@ -15,25 +15,21 @@ let commonPrice = 0;
 
 function checkIsEmpty(){
     if(counters.length == 0){
-        const img = document.querySelector(".empty");
         const commonPrice = document.querySelector(".common-price");
         const message = document.querySelector(".warning");
-        img.style.display = "block";
         commonPrice.style.display = "none";
         message.style.display = "block";
-        disableForm();
+        addCard();
     }
 }
 
-function disableForm(){
-    form.check.checked = false;
-    form.deliveryAdress.style.display = "none";
-    form.check.disabled = true;
-    form.flexRadio[0].disabled = true;
-    form.flexRadio[1].disabled = true;
-    form.email.disabled = true;
-    form.phone.disabled = true;
-    form.btn.disabled = true;
+function addCard(){
+    const newCard = document.createElement("div");
+    newCard.classList = "card md-3 empty";
+    newCard.innerHTML = "<div class='empty_basket'><img src='img/form/basket.png' class='img-fluid rounded-start pr' alt=''></div>"
+    const cardParent = document.querySelector('.products-group');
+    cardParent.appendChild(newCard);
+    console.log(newCard);
 }
 
 function setPrice(){
