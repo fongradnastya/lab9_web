@@ -42,3 +42,27 @@ h1{
     @include flexible();
     max-width: 150px;
 }
+
+/* for js */
+
+.empty{
+    display: none;
+}
+
+.empty_basket{
+    padding-left: 10%;
+}
+
+.warning{
+    display: none;
+    
+}
+
+.group-choose{
+    display: none;
+}
+
+.group{
+    position: relative;
+    margin-bottom: 20px;
+}
